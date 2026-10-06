@@ -408,7 +408,17 @@ function startRv(){ready=true;
   ['.hero>*','#cari .card','#hasil .card.empty','.fi','.foot'].forEach(q=>document.querySelectorAll(q).forEach(e=>list.push(e)));
   list.splice(0).forEach(place)}
 window.rv=(e,n,d)=>{if(rm||!e)return;e._n=n;e._d=d;ready?place(e):list.push(e)};
-const pane=n=>{p1.hidden=n!==1;p2.hidden=n!==2;(n===1?p1:p2).animate([{opacity:0,transform:'translateY(8px)'},{opacity:1,transform:'none'}],{duration:380,easing:'ease-out'});fit()};
+const pane=n=>{
+    p1.hidden=n!==1;
+    p2.hidden=n!==2;
+    (n===1?p1:p2).animate([{opacity:0,transform:'translateY(8px)'},{opacity:1,transform:'none'}],{duration:380,easing:'ease-out'});
+    // 🔥 Update tinggi card + lebar
+    setTimeout(()=>{
+        bx.style.height='auto';
+        bx.style.width=W();
+        setTimeout(()=>fit(), 50);
+    }, 50);
+};
 g('#ibd').onclick=()=>pane(2);g('#ibk').onclick=()=>pane(1);g('#ibx').onclick=g('#ibt').onclick=close;
 addEventListener('keydown',e=>e.key==='Escape'&&close());
 })();
