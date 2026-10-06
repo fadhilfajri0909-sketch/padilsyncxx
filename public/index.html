@@ -419,7 +419,7 @@ const pane=n=>{
         setTimeout(()=>fit(), 50);
     }, 50);
 };
-g('#ibd').onclick=()=>pane(2);g('#ibk').onclick=()=>pane(1);g('#ibx').onclick=g('#ibt').onclick=close;
+g('#ibd').onclick=()=>pane(2);g('#ibk').onclick=close;g('#ibx').onclick=g('#ibt').onclick=close;
 addEventListener('keydown',e=>e.key==='Escape'&&close());
 })();
 </script>
