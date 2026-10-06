@@ -359,7 +359,6 @@ else if(q){u.value=q;u.oninput();search()}
 </script>
 <div id="ig" role="dialog" aria-modal="true" aria-label="Dukung PadilPreset"><div class="igb"><div class="igl"><i></i></div><div class="igi">
 <button class="igx" id="ibx" aria-label="Tutup"><svg width="16" height="16"><use href="#i-x"/></svg></button>
-
 <div id="ip1">
     <h2>Suka sama web ini?</h2>
     <p>Kalau kebantu, bantu donasi dong. Atau minimal follow channel admin deh, biar nggak ketinggalan update.</p>
@@ -369,6 +368,17 @@ else if(q){u.value=q;u.oninput();search()}
     </div>
     <button class="igt" id="ibt">Tutup</button>
 </div>
+  <div id="ip2" hidden>
+    <h2>Donasi lewat QRIS</h2>
+    <div class="qr" style="max-width:180px;margin:0 auto 14px;">
+        <img src="qris.png" alt="QRIS donasi" style="width:100%;height:auto;display:block;">
+    </div>
+    <p>Bisa dibayar pakai e-wallet atau m-banking apa aja.</p>
+    <div class="iga">
+        <a class="btn p" href="qris.png" download="qris-padil.png">Simpan QRIS</a>
+        <button class="btn o" id="ibk">Tutup</button>
+    </div>
+  </div>
 <script>
 (()=>{
 const h=document.documentElement,g=s=>document.querySelector(s),ig=g('#ig'),bx=g('.igb'),inn=g('.igi'),p1=g('#ip1'),p2=g('#ip2');
